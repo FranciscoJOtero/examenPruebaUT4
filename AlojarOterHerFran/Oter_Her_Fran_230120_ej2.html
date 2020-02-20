@@ -104,7 +104,61 @@
             <div class="pie__parte3">
                 <p> <a href="Oter_Her_Fran_230120_ej1.html"> Enlace al ejercicio anterior </a> </p>
             </div>
-
         </footer>
+
+        <div class="contenedorGrid">
+            <div class="elemento1">
+                <button class="geo" onclick="obtenerLocalizacion('campoLatitud','campoLongitud')"> </button> 
+                <!-- <h2>Mapa con la localización actual:</h2> <img src="" id="mapa" class="mapa"> -->
+            </div>
+
+            <div class="elemento2">
+                <form name="formulario1" id="form1"> 
+                    <fieldset> 
+                        <legend>Datos de geolocalización</legend> 
+                        <label id="etiquetaLatitud" for="campoLatitud">Latitud:</label> 
+                        <input name="clatitud" id="campoLatitud" type="text">
+                    </fieldset>
+            </div>
+
+            <div class="elemento3">
+                    <fieldset> 
+                        <legend>Datos de geolocalización</legend>
+                        <label id="etiquetaLongitud" for="campoLongitud">Longitud:</label>
+                        <input name="clongitud" id="campoLongitud" type="text"> 
+                        <!--<label id="etiquetaUrl" for="campoUrl">URL:</label> <input name="cUrl" id="campoUrl" type="url">--> 
+                    </fieldset> 
+                </form>
+            </div>
+        </div>
+
+        <script> 
+            function obtenerLocalizacion(idlati, idlong) { 
+    
+                elementoLat = document.getElementById(idlati); 
+                elementoLong = document.getElementById(idlong); 
+    
+                if (navigator.geolocation) { 
+    
+                    navigator.geolocation.getCurrentPosition(mostrarPosicion);
+                    /*Pasamos como parámetro del nombre de la función a la que llamaremos cuando se obtenga la posición*/ 
+    
+                } else { 
+    
+                    elementoLat.innerHTML = "Tu navegador no soporta geolocalización"; 
+                    elementoLong.innerHTML = "Tu navegador no soporta geolocalización"; 
+                } 
+            } 
+    
+            function mostrarPosicion(posicion) { 
+    
+                elementoLat.value = posicion.coords.latitude; 
+                elementoLong.value = posicion.coords.longitude; 
+                /*Esto sería para localizar las coordenadas en un mapa de Google Maps. 
+                Requiere una clave de la API de Google Maps var latlon = posicion.coords.latitude + "," + posicion.coords.longitude;
+                var img_url = "https://maps.googleapis.com/maps/api/staticmap?center="+latlon+"&zoom=14&size=400x300&sensor=false&key=AIzaSyD09UEK_m9R8dd4dedpFmrHmIjbEBSrzVY";
+                document.getElementById("campoUrl").value = img_url; document.getElementById("mapa").innerHTML = "<img src='"+img_url+"'>";*/ } </script>
+    
+
     </body>
 </html>

@@ -122,3 +122,223 @@ a {
     display: none;
 
 }
+
+@mixin  columnasGrid($valor1,$valor2,$valor3) {
+
+    grid-template-columns: $valor1 $valor2 $valor3;
+    
+}
+
+%bordeNormal {
+
+    border: 2px solid white;
+
+}
+
+
+.contenedorGrid {
+
+    display: grid;
+    margin-top: 0;
+    width: 100%;
+    min-height: 300px;
+    @include columnasGrid(40%,30% ,30%);
+    box-sizing: border-box;
+    margin-top: 10px;
+
+
+    .elemento1 {
+
+        @extend %bordeNormal;
+        background-color: rgb(245, 170, 245);
+        text-align: center;
+
+        .geo {
+
+            background-image: url("../img/Recurso11.jpg");
+            background-repeat: no-repeat;
+            padding: 40px;
+            margin-top: 20%;
+
+        }
+
+    }
+
+    .elemento2 {
+
+        @extend %bordeNormal;
+        background-color: rgb(183, 226, 97);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .elemento3 {
+
+        @extend %bordeNormal;
+        background-color: rgb(248, 158, 142);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (max-width:750px) {
+
+    .cabecera {
+
+        display: grid;
+        grid-template-columns:48vw 48vw;
+        border-bottom: 2px solid black;
+        min-height: 10vh;
+        margin-bottom: 40px;
+        background: rgb(175, 246, 103);
+    
+        &__logo, &__licencia {
+    
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+    
+        }
+    
+    }
+    
+    .seccion {
+    
+        display: grid;
+        grid-template-columns: 100%;
+        border: 2px solid black;
+        min-height: 50vh;
+        background-color: rgb(179, 125, 230);
+        margin-bottom: 30px;
+    
+        &__container1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+    
+        }
+    
+        &__container2 {
+    
+            display: flex;
+            justify-content: center;
+            align-items: center;
+    
+            > button {
+    
+                border-radius: 50%;
+                border: 2px solid black;
+                padding: 20px;
+                margin: 10px;
+            }
+    
+        }
+    
+    }
+    
+    .pie {
+    
+        display: grid;
+        grid-template-columns: 100%;
+        min-height: 40vh;
+    
+        &__parte1 {
+    
+            border: 2px solid black;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+    
+        }
+    
+        &__parte2 {
+    
+            border: 2px solid black;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+    
+        }
+    
+        &__parte3 {
+    
+            border: 2px solid black;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+    
+        }
+    
+    }
+    
+    a {
+    
+        text-decoration: none;
+        color:black;
+        font-size: 1.6rem;
+        font-weight: bold;
+    
+    }
+    
+    #Recurso{
+    
+        display: none;
+    
+    }
+
+    .contenedorGrid {
+
+        display: grid;
+        margin-top: 0;
+        min-height: 300px;
+        grid-template-columns: 100%;
+        box-sizing: border-box;
+        margin-top: 10px;
+    
+    
+        .elemento1 {
+    
+            @extend %bordeNormal;
+            background-color: rgb(245, 170, 245);
+            text-align: center;
+    
+            .geo {
+    
+                background-image: url("../img/Recurso11.jpg");
+                background-repeat: no-repeat;
+                padding: 40px;
+                margin-top: 20%;
+    
+            }
+    
+        }
+    
+        .elemento2 {
+    
+            @extend %bordeNormal;
+            background-color: rgb(183, 226, 97);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+    
+        }
+    
+        .elemento3 {
+    
+            @extend %bordeNormal;
+            background-color: rgb(248, 158, 142);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+}
+

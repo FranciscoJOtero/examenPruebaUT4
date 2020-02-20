@@ -90,4 +90,151 @@ a {
   display: none;
 }
 
+.contenedorGrid .elemento3, .contenedorGrid .elemento2, .contenedorGrid .elemento1 {
+  border: 2px solid white;
+}
+
+.contenedorGrid {
+  display: grid;
+  margin-top: 0;
+  width: 100%;
+  min-height: 300px;
+  grid-template-columns: 40% 30% 30%;
+  box-sizing: border-box;
+  margin-top: 10px;
+}
+.contenedorGrid .elemento1 {
+  background-color: #f5aaf5;
+  text-align: center;
+}
+.contenedorGrid .elemento1 .geo {
+  background-image: url("../img/Recurso11.jpg");
+  background-repeat: no-repeat;
+  padding: 40px;
+  margin-top: 20%;
+}
+.contenedorGrid .elemento2 {
+  background-color: #b7e261;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contenedorGrid .elemento3 {
+  background-color: #f89e8e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 750px) {
+  .cabecera {
+    display: grid;
+    grid-template-columns: 48vw 48vw;
+    border-bottom: 2px solid black;
+    min-height: 10vh;
+    margin-bottom: 40px;
+    background: #aff667;
+  }
+  .cabecera__logo, .cabecera__licencia {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .seccion {
+    display: grid;
+    grid-template-columns: 100%;
+    border: 2px solid black;
+    min-height: 50vh;
+    background-color: #b37de6;
+    margin-bottom: 30px;
+  }
+  .seccion__container1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .seccion__container2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .seccion__container2 > button {
+    border-radius: 50%;
+    border: 2px solid black;
+    padding: 20px;
+    margin: 10px;
+  }
+
+  .pie {
+    display: grid;
+    grid-template-columns: 100%;
+    min-height: 40vh;
+  }
+  .pie__parte1 {
+    border: 2px solid black;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .pie__parte2 {
+    border: 2px solid black;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .pie__parte3 {
+    border: 2px solid black;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.6rem;
+    font-weight: bold;
+  }
+
+  #Recurso {
+    display: none;
+  }
+
+  .contenedorGrid {
+    display: grid;
+    margin-top: 0;
+    min-height: 300px;
+    grid-template-columns: 100%;
+    box-sizing: border-box;
+    margin-top: 10px;
+  }
+  .contenedorGrid .elemento1 {
+    background-color: #f5aaf5;
+    text-align: center;
+  }
+  .contenedorGrid .elemento1 .geo {
+    background-image: url("../img/Recurso11.jpg");
+    background-repeat: no-repeat;
+    padding: 40px;
+    margin-top: 20%;
+  }
+  .contenedorGrid .elemento2 {
+    background-color: #b7e261;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .contenedorGrid .elemento3 {
+    background-color: #f89e8e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
 /*# sourceMappingURL=style2_oter_her_fran.css.map */
