@@ -7,7 +7,100 @@
         <title> Exámen 23-01-2020/Oter_Her_Fran/Ej1 </title>
         <link rel="stylesheet" href="./css/Style1_Oter_Her_Fran.css">
     </head>
+
+    <script>
+
+        function cuantosClicks() { 
+
+            if(typeof(Storage) !== "undefined") { 
+
+                if (localStorage.cuentadeclicks) {
+
+                    //Si existe el contador, lo incrementamos en 1 
+
+                    localStorage.cuentadeclicks = Number(localStorage.cuentadeclicks)+30; 
+
+                    //Realizamos conversión a número para evitar problemas. Los datos siempre se almacenan como cadena y requieren conversión. 
+                } else { 
+
+                    // Si no existe el contador, lo creamos 
+                    localStorage.cuentadeclicks = 30; 
+                } 
+
+                document.getElementById("parrafo").innerHTML = "Has hecho clic en el botón: " + localStorage.cuentadeclicks + " veces en esta sesión."; 
+
+            } else { 
+
+                document.getElementById("parrafo").innerHTML = "El navegador no soporta almacenamiento local"; 
+            }
+        }
+
+        function cuantosClicksTemporal() { 
+
+            if(typeof(Storage) !== "undefined") { 
+
+                if (sessionStorage.cuentadeclicks) {
+
+                    //Si existe el contador, lo incrementamos en 1 
+                    sessionStorage.cuentadeclicks = Number(sessionStorage. cuentadeclicks)*7;
+                    //Realizamos conversión a número para evitar problemas. 
+                    //Los datos siempre se almacenan como cadena y requieren conversión. 
+
+                } else { 
+
+                    // Si no existe el contador, lo creamos 
+                    sessionStorage. cuentadeclicks = 1;
+                } 
+                document.getElementById("parrafo2").innerHTML = "Has hecho clic en el botón: " + sessionStorage. cuentadeclicks + " veces en esta sesión.";
+                
+            } else { 
+
+                document.getElementById("parrafo2").innerHTML = "El navegador no soporta almacenamiento local"; 
+            } 
+        }
+    </script>
+
     <body>
-        <h1> Inicio del examen 23-01-2020 Oter_Her_Fran </h1>
+        <header class="cabeceraGridOterHerFran">
+            <h1 class="cabeceraGridOterHerFran__title"> Inicio del examen 23-01-2020 Oter_Her_Fran </h1>
+            <div class="cabeceraGridOterHerFran__img">
+                <img  src="./img/Recurso1.png" alt="Imagen editada por Oter_Her_Fran">
+            </div>
+            <div class="cabeceraGridOterHerFran__license">
+                <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">
+                <img alt="Licencia Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>
+            </div>
+        </header>
+        <section class="sectionGridOterHerFran">
+            <div class="sectionGridOterHerFran__OterHerFranContenedor1ConBordeVerde">
+                <picture>
+                    <source media="(min-width: 500px)" srcset="./img/Recurso2.jpg">
+                    <source media="(min-width: 400px)" srcset="./img/Recurso3.jpg">
+                    <img src="./img/Recurso4.jpg" alt="Recurso4">
+                </picture>
+            </div>
+            <div class="sectionGridOterHerFran__OterHerFranContenedor2ConBordeAzul">
+                <button type="submit" onclick="cuantosClicks()"> <img src="./img/Recurso5.png" alt="Recurso5"> </button>
+                <p id="parrafo"> Has pulsado el boton </p>
+            </div>
+        </section>
+
+        <footer class="pieGridOterHerFran">
+            <div class="pieGridOterHerFran__uno">
+                <button class="boton" type="submit" onclick="cuantosClicksTemporal()"> <img src="./img/Recurso6.png" alt=""> </button>
+                <p id="parrafo2"> Has pulsado el boton </p>
+            </div>
+            <div class="pieGridOterHerFran__dos">
+                <audio id="audio1" class="pie__audio" controls autoplay loop>
+                    <source src="audio/Recurso7.mp3" type="audio/mpeg">
+                    <source src="audio/Recurso7.ogg" type="audio/ogg">
+                    <source src="audio/Recurso7.wav" type="audio/wav">
+                </audio>
+                <button onclick="document.getElementById('audio1').play()"> Reproducir video </button>
+            </div>
+            <div class="pieGridOterHerFran__tres">
+                <a href="Oter_Her_Fran_230120_ej2.html"> Ejercicio 2 </a>
+            </div>
+        </footer>
     </body>
 </html>
