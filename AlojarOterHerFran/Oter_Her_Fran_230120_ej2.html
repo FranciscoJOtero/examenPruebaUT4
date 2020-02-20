@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Ejercicio 2 </title>
+        <link rel="stylesheet" href="./css/Style2_Oter_Her_Fran.css">
+
+        <script>
+
+            function dibujoI() {
+
+                let canvas1 = document.getElementById('dibujoC');
+                let contexto1 = canvas1.getContext("2d");
+                let image = document.getElementById('Recurso');
+                contexto1.drawImage(image,5,5);
+            }
+
+            function casa() {
+
+                let canvas1 = document.getElementById('dibujoC');
+                let contexto1 = canvas1.getContext("2d");
+                contexto1.strokeRect(200,200, 100,100);
+                contexto1.stroke();
+                let contexto2 = canvas1.getContext("2d");
+                contexto2.strokeRect(230,280,40 ,40);
+                contexto2.stroke();
+                let contexto3 = canvas1.getContext("2d");
+                contexto3.moveTo(200,200);
+                contexto3.lineTo(250,100);
+                contexto3.moveTo(250,100);
+                contexto3.lineTo(300,200);
+                contexto3.stroke();
+                
+            }
+
+            function circulo() {
+
+                let canvas1 = document.getElementById("dibujoC"); 
+                let contexto1 = canvas1.getContext("2d"); 
+                contexto1.beginPath(); 
+                contexto1.arc(250, 170, 15, 0, 2 * Math.PI);/*Eje x, eje y, radio, inicio de la circunferencia (0) y final de la circunferencia(2*PI) 
+                (2*Math.PI*R es la longitud completa de la circunferencia*/
+                 contexto1.stroke()
+
+            }
+
+        </script>
+
+    </head>
+
+    <body>
+        <header class="cabecera">
+
+            <figure class="cabecera__logo">
+                <img src="logo/LogoMakr.png" alt="Logo del ejercicio 2">
+                <figcaption> Creado por Oter_Her_Fran </figcaption> 
+            </figure>
+
+            <div class="cabecera__licencia">
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                    <img alt="Licencia Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />
+                </a>
+            </div>
+
+        </header>
+
+        <section class="seccion">
+
+            <div class="seccion__container1">
+                <video id="video1" autoplay="autoplay" controls loop="loop"> 
+                    <source src="video/Recurso8.mp4" type="video/mp4"> 
+                    <source src="video/Recurso8.ogg" type="video/ogg"> 
+                    <source src="video/Recurso8.webm" type="video/webm"> 
+                    Tu navegador no soporta esta etiqueta HTML5 
+                </video>
+            </div> 
+
+            <div class="seccion__container2">
+                <button onclick="document.getElementById('video1').play()">Reproducir el Vídeo</button> 
+                <button onclick="document.getElementById('video1').pause()">Pausar el Vídeo</button> 
+                <button onclick="document.getElementById('video1').volume+=0.1">Aumentar el Volumen </button>
+                <button onclick="document.getElementById('video1').volume-=0.1">Disminuir el Volumen </button>
+            </div> 
+
+        </section> 
+
+        <footer class="pie">
+            
+            <div class="pie__parte1">
+
+                <img src="./img/Recurso10.jpg" alt="Recurso 10" id="Recurso" width="400" height="300">
+
+                <canvas class="dibujo" width="400" height="300" id="dibujoC">
+
+                </canvas>
+
+            </div>
+
+            <div class="pie__parte2">
+                <button onclick="dibujoI(), casa(), circulo()" class="botonFoto"> <img src="./img/Recurso9.gif" alt=""> </button>
+            </div>
+
+            <div class="pie__parte3">
+                <p> <a href="Oter_Her_Fran_230120_ej1.html"> Enlace al ejercicio anterior </a> </p>
+            </div>
+
+        </footer>
+    </body>
+</html>

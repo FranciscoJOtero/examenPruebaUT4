@@ -1,0 +1,124 @@
+body {
+
+    background: rgb(152, 242, 245);
+    margin: 1%;
+
+}
+* {
+
+    box-sizing: border-box;
+}
+
+img, video, canvas {
+
+    max-width: 100%;
+    height: auto;
+
+}
+
+.cabecera {
+
+    display: grid;
+    grid-template-columns:48vw 48vw;
+    border-bottom: 2px solid black;
+    min-height: 10vh;
+    margin-bottom: 40px;
+    background: rgb(175, 246, 103);
+
+    &__logo, &__licencia {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+
+    }
+
+}
+
+.seccion {
+
+    display: grid;
+    grid-template-columns: 48vw 48vw;
+    border: 2px solid black;
+    min-height: 50vh;
+    background-color: rgb(179, 125, 230);
+    margin-bottom: 30px;
+
+    &__container1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    &__container2 {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        > button {
+
+            border-radius: 50%;
+            border: 2px solid black;
+            padding: 20px;
+            margin: 10px;
+        }
+
+    }
+
+}
+
+.pie {
+
+    display: grid;
+    grid-template-columns: 59vw 9vw 28vw;
+    min-height: 40vh;
+
+    &__parte1 {
+
+        border: 2px solid black;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    &__parte2 {
+
+        border: 2px solid black;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    &__parte3 {
+
+        border: 2px solid black;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+}
+
+a {
+
+    text-decoration: none;
+    color:black;
+    font-size: 1.6rem;
+    font-weight: bold;
+
+}
+
+#Recurso{
+
+    display: none;
+
+}

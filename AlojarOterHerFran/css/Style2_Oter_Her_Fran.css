@@ -1,0 +1,93 @@
+body {
+  background: #98f2f5;
+  margin: 1%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img, video, canvas {
+  max-width: 100%;
+  height: auto;
+}
+
+.cabecera {
+  display: grid;
+  grid-template-columns: 48vw 48vw;
+  border-bottom: 2px solid black;
+  min-height: 10vh;
+  margin-bottom: 40px;
+  background: #aff667;
+}
+.cabecera__logo, .cabecera__licencia {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.seccion {
+  display: grid;
+  grid-template-columns: 48vw 48vw;
+  border: 2px solid black;
+  min-height: 50vh;
+  background-color: #b37de6;
+  margin-bottom: 30px;
+}
+.seccion__container1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.seccion__container2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.seccion__container2 > button {
+  border-radius: 50%;
+  border: 2px solid black;
+  padding: 20px;
+  margin: 10px;
+}
+
+.pie {
+  display: grid;
+  grid-template-columns: 59vw 9vw 28vw;
+  min-height: 40vh;
+}
+.pie__parte1 {
+  border: 2px solid black;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pie__parte2 {
+  border: 2px solid black;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pie__parte3 {
+  border: 2px solid black;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+#Recurso {
+  display: none;
+}
+
+/*# sourceMappingURL=style2_oter_her_fran.css.map */
